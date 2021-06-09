@@ -1,7 +1,7 @@
 // template
-const equipmentTemplate = require('./pages/equipment.hbs')
-const avatarTemplate = require('./pages/avatar.hbs')
-const creatureTemplate = require('./pages/creature.hbs')
+const equipmentTemplate = require('handlebars-loader!./pages/equipment.hbs')
+const avatarTemplate = require('handlebars-loader!./pages/avatar.hbs')
+const creatureTemplate = require('handlebars-loader!./pages/creature.hbs')
 
 const equipment = equipmentTemplate()
 const avatar = avatarTemplate()
