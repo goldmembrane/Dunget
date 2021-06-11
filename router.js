@@ -1,7 +1,7 @@
 // template
-const equipmentTemplate = require('handlebars-loader!./pages/equipment.hbs')
-const avatarTemplate = require('handlebars-loader!./pages/avatar.hbs')
-const creatureTemplate = require('handlebars-loader!./pages/creature.hbs')
+import equipmentTemplate from './pages/equipment.hbs'
+import avatarTemplate  from './pages/avatar.hbs'
+import creatureTemplate from './pages/creature.hbs'
 
 const equipment = equipmentTemplate()
 const avatar = avatarTemplate()
@@ -15,7 +15,7 @@ const routes = {
 }
 
 // entry point
-const initialRoutes = (mode, ele) => {
+export const initialRoutes = (mode, ele) => {
     renderHTML(ele, routes['/'])
 
     if ( mode === 'history' ) {
@@ -24,11 +24,11 @@ const initialRoutes = (mode, ele) => {
         window.addEventListener('hashchange', () => {
             return renderHTML(ele, getHashRoute())
         })
-    }
+    }   
 }
 
 // set browser history
-const historyRouterPush = (pathName, ele) => {
+export const historyRouterPush = (pathName, ele) => {
     window.history.pushState({}, pathName, window.location.origin + pathName)
     renderHTML(ele, routes[pathName])
 }
@@ -54,10 +54,4 @@ const hashRouterPush = (pathName, ele) => {
 // render
 const renderHTML = (ele, route) => {
     ele.innerHTML = route
-}
-
-module.exports = {
-    initialRoutes,
-    historyRouterPush,
-    hashRouterPush,
 }
