@@ -1,5 +1,6 @@
 // router
-const { initialRoutes, historyRouterPush, hashRouterPush } = require('./router')
+import { initialRoutes } from './router.js'
+import { historyRouterPush } from './router.js'
 
 // app division
 const historyAppDivision = document.querySelector('#dunget-container')
