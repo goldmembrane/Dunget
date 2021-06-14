@@ -9,7 +9,7 @@ const historyAppDivision = document.querySelector('#dunget-container')
 initialRoutes('history', historyAppDivision)
 
 window.onload = () => {
-    const historyLinker = document.querySelectorAll('.tab')
+    const historyLinker = document.querySelectorAll('li.tab')
 
     historyLinker.forEach(ele => {
         ele.addEventListener('click', (evt) => {

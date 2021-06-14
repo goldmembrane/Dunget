@@ -30,8 +30,8 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.hbs$/,
-                loader: 'handlebars-loader',
+                test: /\.html$/i,
+                loader: 'html-loader'
             },
             {
                 test: /\.css$/,
