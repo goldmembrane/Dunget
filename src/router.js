@@ -1,7 +1,7 @@
 // template
-import equipmentTemplate from 'html-loader!./pages/equipment.html'
-import avatarTemplate  from 'html-loader!./pages/avatar.html'
-import creatureTemplate from 'html-loader!./pages/creature.html'
+import equipmentTemplate from './pages/equipment.html'
+import avatarTemplate  from './pages/avatar.html'
+import creatureTemplate from './pages/creature.html'
 
 const equipment = equipmentTemplate()
 const avatar = avatarTemplate()
